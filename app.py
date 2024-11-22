@@ -14,7 +14,7 @@ MODEL_PATH = "model/juice_pila_do.h5"
 model = load_model(MODEL_PATH)
 
 # Load the LabelEncoder
-LABEL_ENCODER_PATH = "C:\Users\aayus\OneDrive\Desktop\sih lmaoo\model\label_encoder.pkl"
+LABEL_ENCODER_PATH = "model/label_encoder.pkl"
 with open(LABEL_ENCODER_PATH, "rb") as file:
     label_encoder = pickle.load(file)
 
