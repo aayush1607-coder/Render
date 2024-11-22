@@ -10,7 +10,7 @@ from preprocess import preprocess_image
 app = Flask(__name__)
 
 # Load the trained model
-MODEL_PATH = "C:\Users\aayus\OneDrive\Desktop\sih lmaoo\model\juice_pila_do (1).h5"
+MODEL_PATH = "model/juice_pila_do.h5"
 model = load_model(MODEL_PATH)
 
 # Load the LabelEncoder
