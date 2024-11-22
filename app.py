@@ -60,4 +60,21 @@ def index():
                 app.logger.error(f"Error in decoding prediction: {e}")
                 return "Error in decoding the prediction!", 500
             
-            # 
+            # Delete the file after processing
+            os.remove(file_path)
+            
+            # Return the result
+            result = {
+                "class": predicted_class_label,
+                "confidence": float(confidence),
+            }
+            return jsonify(result)
+        
+        return render_template("index.html")
+    
+    except Exception as e:
+        app.logger.error(f"Unexpected error: {e}")
+        return "An unexpected error occurred!", 500
+
+if __name__ == "__main__":
+    app.run(debug=True)
