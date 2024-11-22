@@ -14,7 +14,7 @@ UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load the trained model
-MODEL_PATH = "model/crop_disease_model.keras"
+MODEL_PATH = "model/juice_pila_do.h5"
 model = load_model(MODEL_PATH)
 
 # Load the LabelEncoder
